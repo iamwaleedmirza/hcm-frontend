@@ -1,0 +1,16 @@
+.input-field {
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #D9E1E1CC;
+    color: #16151CCC;
+    font-size: 16px;
+
+    &:focus-within {
+        outline: none;
+    }
+}
+.input-icon {
+    top: 15px;
+    left: 13px;
+    color: #A2A1A8CC;
+}

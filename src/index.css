@@ -53,3 +53,8 @@ td.p-datepicker-other-month {
 .p-datepicker-prev:before {
   transform: rotate(180deg);
 }
+
+#chart {
+  width: 100%;
+  max-width: 380px;
+}

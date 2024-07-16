@@ -8,6 +8,7 @@ import calendarWhite from "../../assets/icons/calendar-white.svg";
 import alarm from "../../assets/icons/alarm.svg";
 import SemiCircleChart from "../charts/semiCircleChart";
 import Calendar from "./calendar";
+import PieChart from "../charts/pieChart";
 
 export const DasboardCards = () => {
   interface ButtonData {
@@ -126,12 +127,13 @@ export const DasboardCards = () => {
           <Calendar />
         </div>
 
-        <div className="border border-borderColor rounded-xl p-6 xl:w-[358px] w-full">
+        <div className="border border-borderColor rounded-xl p-6 xl:w-[358px] w-full mb-10">
           <h3 className="flex items-center gap-3 mb-4 text-textColor text-base font-semibold">
             <img src={speed} className="inline-block" alt="speed icon" />{" "}
             Attention Overview
           </h3>
           <hr className="border-[#D9E1E1CC] mb-6" />
+          <PieChart />
         </div>
       </div>
     </Fragment>

@@ -1,9 +1,29 @@
-import logoImg from "../../../assets/logo/logo.png"
-import { IoIosArrowForward } from "react-icons/io"
-import { TbLayoutDashboardFilled } from "react-icons/tb"
-import { Link } from "react-router-dom"
+import { useState, useEffect, SetStateAction } from "react";
+import logoImg from "../../../assets/logo/logo.png";
+import { IoIosArrowForward } from "react-icons/io";
+import { TbLayoutDashboardFilled } from "react-icons/tb";
+import { Link, useLocation } from "react-router-dom";
 
 export const Sidebar = () => {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState("/");
+
+    useEffect(() => {
+        if (location.pathname === "/" || location.pathname === "/dashboard") {
+            setActiveLink("/");
+        } else {
+            setActiveLink(location.pathname);
+        }
+    }, [location.pathname]);
+
+    const handleLinkClick = (path: SetStateAction<string>) => {
+        if (path === "/dashboard") {
+            setActiveLink("/");
+        } else {
+            setActiveLink(path);
+        }
+    };
+
     return (
         <div className="sidebar-main">
             <div className="logo flex items-center">
@@ -12,7 +32,11 @@ export const Sidebar = () => {
             <div className="menu-items mt-10">
                 <ul>
                     <li>
-                        <Link to="/dashboard" className="active">
+                        <Link 
+                            to="/dashboard" 
+                            className={activeLink === "/" ? "active" : ""}
+                            onClick={() => handleLinkClick("/dashboard")}
+                        >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
                                 <span className="pl-2">
@@ -26,11 +50,15 @@ export const Sidebar = () => {
                     </li>
 
                     <li>
-                        <Link to="/">
+                        <Link 
+                            to="/cards" 
+                            className={activeLink === "/cards" ? "active" : ""}
+                            onClick={() => handleLinkClick("/cards")}
+                        >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
                                 <span className="pl-2">
-                                    Dashboard
+                                    Cards
                                 </span>
                             </span>
                             <span className="text-black item-arrow">
@@ -40,11 +68,15 @@ export const Sidebar = () => {
                     </li>
 
                     <li>
-                        <Link to="/">
+                        <Link 
+                            to="/profile" 
+                            className={activeLink === "/profile" ? "active" : ""}
+                            onClick={() => handleLinkClick("/profile")}
+                        >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
                                 <span className="pl-2">
-                                    Dashboard
+                                    Profile
                                 </span>
                             </span>
                             <span className="text-black item-arrow">
@@ -55,5 +87,5 @@ export const Sidebar = () => {
                 </ul>
             </div>
         </div>
-    )
-}
+    );
+};

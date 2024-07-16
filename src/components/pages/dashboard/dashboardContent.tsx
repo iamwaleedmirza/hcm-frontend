@@ -28,10 +28,10 @@ export const DashboardContent = () => {
   return (
     <Fragment>
       <div className="max-w-[1240px] xl:mx-auto mx-4 flex flex-col xl:flex-row gap-5 flex-wrap">
-        <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-7">
-            <div className="grid grid-cols-12 gap-5">
-              <div className="col-span-6">
+        <div className="grid grid-cols-12 gap-5 h-full">
+          <div className="col-span-7 h-full">
+            <div className="grid grid-cols-12 gap-5 h-full">
+              <div className="col-span-6 h-full">
                 <DashboardCard text="test" img={speed}>
                   {buttonsData.map((button) => (
                     <button
@@ -51,7 +51,7 @@ export const DashboardContent = () => {
                   ))}
                 </DashboardCard>
               </div>
-              <div className="col-span-6">
+              <div className="col-span-6 h-full">
                 <DashboardCard text="Time Off" img={stopwatch} buttonText="See all" buttonIcon={arrow}>
                   <SemiCircleChart />
                   <div className="w-full my-2 text-textColor text-left p-4 flex items-center justify-between text-sm font-light">

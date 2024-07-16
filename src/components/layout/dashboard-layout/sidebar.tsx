@@ -1,6 +1,7 @@
 import logoImg from "../../../assets/logo/logo.png"
 import { IoIosArrowForward } from "react-icons/io"
 import { TbLayoutDashboardFilled } from "react-icons/tb"
+import { Link } from "react-router-dom"
 
 export const Sidebar = () => {
     return (
@@ -11,7 +12,7 @@ export const Sidebar = () => {
             <div className="menu-items mt-10">
                 <ul>
                     <li>
-                        <a href="#" className="active">
+                        <Link to="/dashboard" className="active">
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
                                 <span className="pl-2">
@@ -21,11 +22,11 @@ export const Sidebar = () => {
                             <span className="text-black none item-arrow">
                                 <IoIosArrowForward />
                             </span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <Link to="/">
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
                                 <span className="pl-2">
@@ -35,11 +36,11 @@ export const Sidebar = () => {
                             <span className="text-black item-arrow">
                                 <IoIosArrowForward />
                             </span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <Link to="/">
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
                                 <span className="pl-2">
@@ -49,7 +50,7 @@ export const Sidebar = () => {
                             <span className="text-black item-arrow">
                                 <IoIosArrowForward />
                             </span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

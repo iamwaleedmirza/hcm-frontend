@@ -3,6 +3,7 @@ import { Fragment } from "react/jsx-runtime"
 import { Header } from "./header"
 import { Sidebar } from "./sidebar"
 import "../../../styles/dashboardLayout.scss"
+import { Outlet } from "react-router-dom"
 
 export const DashboardLayout = () => {
     return (
@@ -12,7 +13,7 @@ export const DashboardLayout = () => {
                 <div className="flex flex-col flex-grow">
                     <Header />
                     <main className="flex-grow px-16 py-6 overflow-y-auto">
-                        <h1>Inner Content</h1>
+                        <Outlet />
                     </main>
                     {/* <Footer /> */}
                 </div>

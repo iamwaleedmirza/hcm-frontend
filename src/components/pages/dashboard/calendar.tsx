@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Calendar } from "primereact/calendar";
 
 import "primereact/resources/themes/lara-light-cyan/theme.css";
@@ -10,7 +10,7 @@ export default function InlineDemo() {
     <div className="w-fit mx-auto">
       <Calendar
         value={date}
-        onChange={(e) => setDate(e.value)}
+        onChange={(e: any) => setDate(e.value)}
         selectionMode="range"
         inline
       />

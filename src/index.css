@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-gradient {
+  background: linear-gradient(135deg, #5d30be 0%, #b330be 100%);
+}
+body {
+  font-family: "Lexend", sans-serif;
+}
+.p-datepicker-today span,
+.p-highlight {
+  background-color: #7152f3;
+  color: white;
+}
+.p-highlight:hover {
+  color: #000000;
+}
+.p-link {
+  color: #16151c !important;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Lexend", sans-serif;
+}
+td.p-datepicker-other-month {
+  color: transparent;
+}
+.p-datepicker-calendar thead span {
+  font-size: 16px;
+  font-weight: normal !important;
+}
+.p-datepicker-calendar tbody span:hover {
+  background: #7152f31a;
+}
+.p-datepicker-prev,
+.p-datepicker-next {
+  background: #7152f3;
+  color: transparent;
+  border-radius: 10px;
+  position: relative;
+}
+.p-datepicker-prev:before,
+.p-datepicker-next:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(/src/assets/icons/Arrow.svg) center/contain no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-datepicker-prev:before {
+  transform: rotate(180deg);
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import arrowSvg from "@assets/icons/left-arrow.svg";
 import { SetStateAction } from "react";
-import logoImg from "../../../assets/logo/logo.png";
+import logoImg from "@assets/logo/logo.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { Link, useLocation } from "react-router-dom";

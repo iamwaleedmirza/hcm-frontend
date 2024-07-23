@@ -1,6 +1,18 @@
 .sidebar-main {
   width: 300px;
   border-right: 1px solid #d9e1e1cc;
+  transition: .4s;
+
+  &.close-sidebar {
+    width: 0;
+    transform: translateX(-300px);
+  .menu-items {
+    .sidebar-arrow {
+      right: -320px;
+      transform: rotate(175deg);
+    }
+  }
+  }
 
   .logo {
     height: 98px;
@@ -8,6 +20,12 @@
     border-bottom: 1px solid #d9e1e1cc;
   }
   .menu-items {
+    .sidebar-arrow {
+      top: 50%;
+      right: 0;
+      border-radius: 50px 0 0 50px;
+      z-index: 999;
+    }
     li {
       padding: 0 20px;
       margin-top: 10px;

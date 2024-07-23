@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
-import Profile from "../../../assets/profile-pic/avatar.png";
-import svg from "../../../assets/icons/edit.svg";
+import Profile from "@assets/profile-pic/avatar.png";
+import svg from "@assets/icons/edit.svg";
 
 export const DashboardProfile = () => {
   return (

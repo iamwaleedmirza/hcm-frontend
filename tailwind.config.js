@@ -7,6 +7,7 @@ export default {
         primary: "#7152F3",
         borderColor: "#CEC4F6",
         textColor: "#16151CCC",
+        primaryTransparent: '#7152F30D',
       },
     },
   },

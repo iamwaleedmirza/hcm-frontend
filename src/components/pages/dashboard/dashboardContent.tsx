@@ -1,11 +1,11 @@
 import { Fragment } from "react/jsx-runtime";
-import speed from "../../../assets/icons/speed test.svg";
-import stopwatch from "../../../assets/icons/stopwatch.svg";
-import calendar from "../../../assets/icons/calendar.svg";
-import notepad from "../../../assets/icons/notepad.svg";
-import arrow from "../../../assets/icons/Arrow.svg";
-import calendarWhite from "../../../assets/icons/calendar-white.svg";
-import alarm from "../../../assets/icons/alarm.svg";
+import speed from "@assets/icons/speed test.svg";
+import stopwatch from "@assets/icons/stopwatch.svg";
+import calendar from "@assets/icons/calendar.svg";
+import notepad from "@assets/icons/notepad.svg";
+import arrow from "@assets/icons/Arrow.svg";
+import calendarWhite from "@assets/icons/calendar-white.svg";
+import alarm from "@assets/icons/alarm.svg";
 import SemiCircleChart from "../../charts/semiCircleChart";
 import Calendar from "./calendar";
 import { DashboardCard } from "../../common/dashboardCard";

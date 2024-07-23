@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { IoIosArrowForward } from "react-icons/io";
-import { TbLayoutDashboardFilled } from "react-icons/tb";
-import logoImg from "@assets/logo/logo.png";
 import arrowSvg from "@assets/icons/left-arrow.svg";
-import { useState, useEffect, SetStateAction } from "react";
+import { SetStateAction } from "react";
 import logoImg from "../../../assets/logo/logo.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { Link, useLocation } from "react-router-dom";
 
 export const Sidebar = () => {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState("/");
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const handleSidebar = () => {
@@ -28,9 +26,6 @@ export const Sidebar = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
-    const location = useLocation();
-    const [activeLink, setActiveLink] = useState("/");
 
     useEffect(() => {
         if (location.pathname === "/" || location.pathname === "/dashboard") {
@@ -112,7 +107,5 @@ export const Sidebar = () => {
                 </ul>
             </div>
         </div>
-    );
-};
     );
 };

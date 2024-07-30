@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import arrowSvg from "@assets/icons/left-arrow.svg";
 import { SetStateAction } from "react";
-import logoImg from "@assets/logo/logo.png";
+import logoImg from "@assets/logo/logo.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { Link, useLocation } from "react-router-dom";
+import mobLogo from "@assets/logo/logo_notext.svg";
 
 export const Sidebar = () => {
     const location = useLocation();
@@ -45,8 +46,9 @@ export const Sidebar = () => {
 
     return (
         <div className={`sidebar-main relative ${isSidebarOpen ? 'close-sidebar' : ''}`}>
-            <div className="logo flex items-center">
-                <img src={logoImg} alt="logo img" width={123} height={50} />
+            <div className={`logo flex items-center justify-center ${isSidebarOpen ? "pr-0" : "pr-20"}`}>
+                {isSidebarOpen ? <img src={mobLogo} alt="logo img" width={37} height={50} /> 
+                : <img src={logoImg} alt="logo img" width={123} height={50} />}
             </div>
             <div className="menu-items mt-10">
                 <button onClick={handleSidebar} className="sidebar-arrow absolute bg-primaryTransparent py-4 px-2">
@@ -61,7 +63,7 @@ export const Sidebar = () => {
                         >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
-                                <span className="pl-2">Dashboard</span>
+                                <span className="pl-2 menu-text">Dashboard</span>
                             </span>
                             <span className="text-black none item-arrow">
                                 <IoIosArrowForward />
@@ -76,10 +78,7 @@ export const Sidebar = () => {
                         >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
-                                <span className="pl-2">Dashboard</span>
-                                <span className="pl-2">
-                                    Cards
-                                </span>
+                                <span className="pl-2 menu-text">Dashboard Cards</span>
                             </span>
                             <span className="text-black item-arrow">
                                 <IoIosArrowForward />
@@ -94,10 +93,8 @@ export const Sidebar = () => {
                         >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
-                                <span className="pl-2">Dashboard</span>
-                                <span className="pl-2">
-                                    Profile
-                                </span>
+                                <span className="pl-2 menu-text">Dashboard Profile</span>
+                                
                             </span>
                             <span className="text-black item-arrow">
                                 <IoIosArrowForward />

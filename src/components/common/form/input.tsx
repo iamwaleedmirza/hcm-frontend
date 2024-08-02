@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { IconType } from "react-icons";
-import "../../../styles/form.scss"
+import "@src/styles/form.scss"
 
 interface InputProps {
     type: string;

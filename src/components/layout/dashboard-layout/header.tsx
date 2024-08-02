@@ -2,7 +2,7 @@ import { Fragment } from "react/jsx-runtime"
 import { Input } from "../../common/form/input"
 import { CiSearch } from "react-icons/ci"
 import { FaBell } from "react-icons/fa"
-import profileImg from "../../../assets/images/profile.png"
+import profileImg from "@assets/images/profile.png"
 import { IoIosArrowDown } from "react-icons/io";
 
 export const Header = () => {

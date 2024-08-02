@@ -12,6 +12,7 @@ export const Header = () => {
 
     const getLocation = (pathname: string) => {
         switch (pathname) {
+            case '/':
             case '/dashboard':
                 return 'Dashboard';
             case '/attendance':

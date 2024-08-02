@@ -11,7 +11,6 @@ import Calendar from "./calendar";
 import { DashboardCard } from "../../common/dashboardCard";
 import PieChart from "../../charts/pieChart";
 
-
 export const DashboardContent = () => {
   interface ButtonData {
     id: number;
@@ -46,17 +45,30 @@ export const DashboardContent = () => {
                         />
                         {button.text}
                       </div>
-                      <img src={arrow} className="inline-block" alt="arrow icon" />
+                      <img
+                        src={arrow}
+                        className="inline-block"
+                        alt="arrow icon"
+                      />
                     </button>
                   ))}
                 </DashboardCard>
               </div>
               <div className="col-span-6 h-full">
-                <DashboardCard text="Time Off" img={stopwatch} buttonText="See all" buttonIcon={arrow}>
+                <DashboardCard
+                  text="Time Off"
+                  img={stopwatch}
+                  buttonText="See all"
+                  buttonIcon={arrow}
+                >
                   <SemiCircleChart />
                   <div className="w-full my-2 text-textColor text-left p-4 flex items-center justify-between text-sm font-light">
                     <div className="flex items-center">
-                      <img src={alarm} className="inline-block mr-3" alt="icon" />
+                      <img
+                        src={alarm}
+                        className="inline-block mr-3"
+                        alt="icon"
+                      />
                       April 15, 2024{" "}
                       <span className="ml-2 text-[#A2A1A8CC]">(sick)</span>
                     </div>
@@ -67,7 +79,11 @@ export const DashboardContent = () => {
                   <hr className="border-[#D9E1E1CC]" />
                   <div className="w-full my-2 text-textColor text-left p-4 flex items-center justify-between text-sm font-light">
                     <div className="flex items-center">
-                      <img src={alarm} className="inline-block mr-3" alt="icon" />
+                      <img
+                        src={alarm}
+                        className="inline-block mr-3"
+                        alt="icon"
+                      />
                       April 15, 2024{" "}
                       <span className="ml-2 text-[#A2A1A8CC]">(sick)</span>
                     </div>
@@ -78,7 +94,11 @@ export const DashboardContent = () => {
                   <hr className="border-[#D9E1E1CC]" />
                   <div className="w-full my-2 text-textColor text-left p-4 flex items-center justify-between text-sm font-light">
                     <div className="flex items-center">
-                      <img src={alarm} className="inline-block mr-3" alt="icon" />
+                      <img
+                        src={alarm}
+                        className="inline-block mr-3"
+                        alt="icon"
+                      />
                       April 15, 2024{" "}
                       <span className="ml-2 text-[#A2A1A8CC]">(sick)</span>
                     </div>
@@ -93,7 +113,11 @@ export const DashboardContent = () => {
           </div>
 
           <div className="col-span-5">
-            <DashboardCard text="My Schedule" img={calendar} buttonIcon={calendarWhite}>
+            <DashboardCard
+              text="My Schedule"
+              img={calendar}
+              buttonIcon={calendarWhite}
+            >
               <Calendar />
             </DashboardCard>
           </div>

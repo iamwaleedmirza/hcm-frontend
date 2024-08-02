@@ -2,8 +2,8 @@ import "./App.css";
 import { DashboardLayout } from "./components/layout/dashboard-layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DashboardMain } from "./components/pages/dashboard";
-import { DashboardContent } from "./components/pages/dashboard/dashboardContent";
 import { DashboardProfile } from "./components/pages/dashboard/dashboardProfile";
+import { AttendanceMain } from "./components/pages/attendance";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<DashboardLayout />}>
           <Route index element={<DashboardMain />} />
           <Route path="dashboard" element={<DashboardMain />} />
-          <Route path="cards" element={<DashboardContent />} />
+          <Route path="cards" element={<AttendanceMain />} />
           <Route path="profile" element={<DashboardProfile />} />
         </Route>
       </Routes>

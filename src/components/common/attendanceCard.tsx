@@ -1,4 +1,4 @@
-interface dashboardCardType {
+interface attendanceCardType {
   text: String;
   children: React.ReactNode;
   img: any;
@@ -6,7 +6,7 @@ interface dashboardCardType {
   buttonIcon?: any;
   buttonClick?: () => void;
 }
-export const DashboardCard: React.FC<dashboardCardType> = ({
+export const AttendanceCard: React.FC<attendanceCardType> = ({
   text,
   children,
   img,

@@ -4,16 +4,31 @@ import { CiSearch } from "react-icons/ci"
 import { FaBell } from "react-icons/fa"
 import profileImg from "@assets/images/profile.png"
 import { IoIosArrowDown } from "react-icons/io";
+import { useLocation } from "react-router-dom"
 
 export const Header = () => {
+
+    const location = useLocation();
+
+    const getLocation = (pathname: string) => {
+        switch (pathname) {
+            case '/dashboard':
+                return 'Dashboard';
+            case '/attendance':
+                return 'Attendance'
+        }
+    }
     return (
         <Fragment>
             <div className="header-main px-16 py-6">
-                <div className="grid grid-cols-12">
-                    <div className="col-span-6 search-div">
+                <div className="grid grid-cols-12 items-center">
+                    <div className="col-span-2">
+                        <h1 className="mb-0 text-xl font-bold">{getLocation(location.pathname)}</h1>
+                    </div>
+                    <div className="col-span-5 search-div">
                         <Input type="text" placeholder="Search" Icon={CiSearch} />
                     </div>
-                    <div className="col-span-6">
+                    <div className="col-span-5">
                         <div className="flex w-full justify-end align-center">
                             <div className="header-notification flex justify-center items-center text-white">
                                 <FaBell className="text-xl" />

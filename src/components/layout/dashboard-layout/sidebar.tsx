@@ -72,13 +72,13 @@ export const Sidebar = () => {
                     </li>
                     <li>
                         <Link 
-                            to="/cards" 
-                            className={activeLink === "/cards" ? "active" : ""}
-                            onClick={() => handleLinkClick("/cards")}
+                            to="/attendance" 
+                            className={activeLink === "/attendance" ? "active" : ""}
+                            onClick={() => handleLinkClick("/attendance")}
                         >
                             <span className="flex items-center">
                                 <TbLayoutDashboardFilled />
-                                <span className="pl-2 menu-text">Dashboard Cards</span>
+                                <span className="pl-2 menu-text">Attendance</span>
                             </span>
                             <span className="text-black item-arrow">
                                 <IoIosArrowForward />

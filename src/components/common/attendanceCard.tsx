@@ -1,6 +1,6 @@
 interface attendanceCardType {
   text: String;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   img: any;
   buttonText?: String;
   buttonIcon?: any;
